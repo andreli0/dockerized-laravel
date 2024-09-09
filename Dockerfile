@@ -53,3 +53,6 @@ RUN chown -R www-data:www-data /var/www/app/storage /var/www/app/bootstrap/cache
 
 COPY wait-for-it.sh ./
 RUN chmod +x wait-for-it.sh
+
+#GENERATE KEY 
+RUN php artisan key:generate

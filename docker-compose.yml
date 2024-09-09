@@ -49,5 +49,5 @@ services:
       - .:/var/www/app:delegated
     networks:
       - laravel
-    command: sh -c "./wait-for-it.sh postgres:5432 -- php artisan migrate:install && php artisan migrate --force && php-fpm"
+    command: sh -c "./wait-for-it.sh postgres:5432 -- php artisan migrate --force && php-fpm"
 
